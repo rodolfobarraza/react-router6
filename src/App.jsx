@@ -1,6 +1,9 @@
+import Navbar from "./components/Navbar";
+
 const App = () => { 
   return <>
-    Hola Putos...
+    <Navbar></Navbar>
+    <h1>APP</h1>
   </>
 }
 
