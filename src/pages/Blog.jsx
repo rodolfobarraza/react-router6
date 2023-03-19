@@ -1,7 +1,14 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { useFetch } from "../hooks/useFetch";
 
 const Blog = () => {
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  useEffect(() => {
+    console.log(searchParams.get('title'));
+  }, [searchParams]);
 
   const { data, loading, error } = useFetch('https://jsonplaceholder.typicode.com/posts');
 
